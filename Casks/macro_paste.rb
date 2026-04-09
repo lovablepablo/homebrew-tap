@@ -15,4 +15,17 @@ cask "macro_paste" do
   zap trash: [
     "~/Library/Application Support/macro_paste",
   ]
+
+  caveats <<~EOS
+    macro_paste is not signed with an Apple Developer ID. macOS will
+    block it on first launch. To allow it, remove the quarantine flag:
+
+      xattr -dr com.apple.quarantine "#{appdir}/macro_paste.app"
+
+    Keystroke simulation also requires Accessibility permission:
+    System Settings → Privacy & Security → Accessibility.
+    After every upgrade you must remove and re-add macro_paste in the
+    Accessibility list — macOS revokes the permission whenever the
+    binary is replaced.
+  EOS
 end
