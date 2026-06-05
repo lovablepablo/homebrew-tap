@@ -1,6 +1,6 @@
 cask "macro_paste" do
-  version "1.3.4"
-  sha256 "dd3be5ae306b471b68799cd99dc4b075310e1ae8f7db567f2b7e6636054cef6a"
+  version "1.4.0"
+  sha256 "d7d83b6b5c0b0d2f7ae401df57687b9b480d40b88269081e9a5b24ad7c6017b5"
 
   url "https://github.com/lovablepablo/macro_paste/releases/download/v#{version}/macro_paste-macos-arm64.zip"
   name "macro_paste"
